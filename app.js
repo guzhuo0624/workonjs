@@ -14,7 +14,7 @@ var app = express();
  
 var key_file = "eatz-key.pem";
 var cert_file = "eatz-cert.pem";
-var config = {
+var SSLconfig = {
   key: fs.readFileSync(key_file),
  cert: fs.readFileSync(cert_file)
 };
@@ -91,4 +91,7 @@ app.post('/auth',eatz.signup);
 
 });
 
-https.createServer(config, app).listen(8080);
+https.createServer(SSLconfig, app).listen(config.port, function () {
+    console.log("Express server listening on port %d in %s mode",
+      app.get('port'), config.env );
+});
