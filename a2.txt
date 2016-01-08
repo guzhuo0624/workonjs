@@ -1,0 +1,1 @@
+I think the most diffcult part is the logic between database and our project, especially there are some new concepts that we need to handle it in a short time, it costs me a lot of time to understand the relationships between a lot of methods. Overall, I am glad that I finished assignment 2.

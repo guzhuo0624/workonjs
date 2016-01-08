@@ -1,0 +1,120 @@
+
+<div class="navbar navbar-fixed-top" id="header-view">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">My Eatz</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li class="active home">
+							<a href="# "><span>Home</span></a></li> 
+        	<li class="active edit">
+							<a href="#dishes/add"><span>add</span></a></li>
+        	<li class="active dish">
+							<a href="#dishes"><span>browse</span></a></li>
+           
+        </ul>
+        <ul class="nav pull-right">
+		<li class="dropdown" id="menuSort">
+      <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navSort">Sort</a>
+      <div class="dropdown-menu" style="padding:17px;">
+        <form class="form" id="formsort"> 
+            <div class="btn-group" data-toggle="buttons">
+      <label for="name" class="control-label">Name</label>
+   <input type="radio" name="sortby" id="name" class="form-group" name="options">Name
+            <label for="name" class="control-label">Venue</label>
+            <input type="radio" name="sortby" id="venue" class="form-group" name="options"> Venue
+            <label for="name" class="control-label">Distance</label>
+            <input type="radio" name="sortby" id="distance" class="form-group" name="options"> Distance
+    
+      </div>
+      
+                  
+      </form>
+      </div>
+    </li>
+	<!-- Sort -->
+		
+		
+		 <li class="dropdown" id="signupform">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Sign Up</a>
+            <div class="dropdown-menu" style="padding:17px;">
+              <form class="form" id="formLogin">
+
+			   <div class="controls">
+         
+			  <input type="text" name="username"  value="<%= username %>" placeholder="User Name"/>
+			  <span class="help-inline"> </span>
+			  </div>
+			   <div class="controls">
+                <input type="text"  value="<%= email %>" name="email"  placeholder="Email"/> 
+				<span class="help-inline"> </span>
+				</div>
+				 <div class="controls">
+				<input type="password" value="<%= password %>"
+								placeholder="Password"
+								name="password"
+								required />
+								<span class="help-inline"> </span>
+								</div>
+								 <div class="controls">
+              <input type="password" value="<%= confirmpassword %>"
+								placeholder="Confirm Password"
+								name="confirmpassword"
+								required />
+								<span class="help-inline"> </span>
+				 <br>
+				 </div>
+                 <button type="button" class="btn btn-primary" data-dismiss="modal" id="signup">Sign Up</button>
+              </form>
+            </div>
+          </li>
+		
+		
+		<li class="dropdown" id="loggedin" style="display:none;">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin"><%= username %></a>
+            <div class="dropdown-menu" style="padding:17px;">
+                <%= username %><br>
+                <button type="button" id="logout" class="btn btn-primary">Sign Out</button>
+            </div>
+          </li>
+          <li class="dropdown" id="menuLogin">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Sign In</a>
+            <div class="dropdown-menu" style="padding:17px;">
+              <form class="form" id="formLogin"> 
+
+				 <div class="controls">
+                <input name="username" id="username" type="text"  value="<%= username %>" placeholder="Username"> 
+				<span class="help-inline"> </span>
+			  </div>
+			   <div class="controls">
+                <input name="password" id="password" type="password" value="<%= password %>" placeholder="Password"><br>
+				<span class="help-inline"> </span>
+			  </div>
+				<div class="checkbox">
+			<label><input type="checkbox" name="rememberme" value="1">Remember Me</label>
+			</div>
+                <button type="button" id="btnLogin" class="btn btn-primary">Login</button>
+              </form>
+            </div>
+          </li>
+		  <li class = "about">	
+			<a href="#about"><span>About<span></a>
+	    </li>
+        </ul>
+      </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+  </div><!-- /.navbar-inner -->
+  <div class="alert-message error" id="notification-bar" style="display:none;">
+    <a class="close" data-dismiss="notification-bar" href="javascript:eatz.utils.hideNotice();">×</a>
+    <p></p>
+  </div>
+</div><!-- /.navbar --> 
+ 
+ 
+
+

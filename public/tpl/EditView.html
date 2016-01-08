@@ -1,0 +1,83 @@
+<div class="row-fluid">
+
+  <form class="form-horizontal span12">
+
+    <!-- ADD YOUR CODE HERE -->
+    <fieldset>
+      <legend><font size="6" color="white">Dish</font></legend>
+
+      <div class="row">
+        <div class="span7">
+					<button id="save" type="button">Save</button>
+					<button id="delete" type="button">delete</button></br></br>
+	  <!-- ADD YOUR CODE HERE -->
+          <div class="name">
+            <label for="name" class="control-label">Name</label>
+            <div class="controls">
+              <input type="text" name="name" value="<%= name %>" placeholder="name"/>
+                <span class="help-inline"></span>
+            </div>
+          </div></br>
+          <div class="venue">
+            <label for="venue" class="control-label">Served by</label>
+            <div class="controls">
+              <input type="text" name="venue" value="<%= venue %>" placeholder="venue"/>
+                <span class="help-inline"> </span>
+            </div>
+          </div></br>
+          <div class="info">
+            <label for="info" class="control-label">Dish/Venue info</label>
+            <div class="controls">
+              <input type="text" name="info" value="<%= info %>" placeholder="takeout, breakfast..."/>
+                <span class="help-inline"> </span>
+            </div>
+          </div></br>
+          <div class="url">
+            <label for="url" class="control-label">Web site URL</label>
+            <div class="controls">
+              <input type="text" name="url" value="<%= url %>" placeholder="http://something.com"/>
+                <span class="help-inline"> </span>
+            </div>
+          </div></br>
+          <div class="number">
+            <label for="number" class="control-label">Street Address</label>
+            <div class="controls">
+              <input type="text" name="number" value="<%= number %>" placeholder="street #"/>
+                <span class="help-inline"> </span>
+						</div>
+					</div>
+          <div class="street">
+            <label for="street" class="control-label"> </label>
+            <div class="controls">
+              <input type="text" name="street" value="<%= street %>" placeholder="street name"/>
+                <span class="help-inline"> </span>
+					</div>
+					</div>
+          <div class="city">
+            <label for="city" class="control-label"> </label>
+            <div class="controls">
+              <input type="text" name="city" value="<%= city %>" placeholder="city name"/>
+                <span class="help-inline"> </span>
+                <button id="location" type="button">Use my location</button>
+					</div>
+					</div>
+
+        </div> <!-- span7 main input panel -->
+        <br/>
+        <div class = "drop-picture">
+				<div class = "top">
+				<img src = "<%= image %>" value="<%= image %>"></img>
+				</div>
+				<div class = "bottom">
+				<input type = "file" id="file_data" name="file_data"  accept= "image/*" capture = "camera" class = "upload">
+        </div>
+
+				</div>
+      </div> <!-- row -->
+    </fieldset>
+
+  </form>
+
+</div> <!-- row-fluid -->
+ <div class="row" id="map" style="width: 500px; height: 400px;">
+</div>
